@@ -5,7 +5,7 @@ function Nav(props){
     return(
         <nav>
             <h1>Clicky Game</h1>
-            <p>Score: 0 | Top Score: 1</p>
+            <p>Score: {props.score} | Top Score: {props.topScore}</p>
             <p >You guessed correctly!</p>
         </nav>
     );

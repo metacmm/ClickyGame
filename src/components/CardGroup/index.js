@@ -3,18 +3,16 @@ import "./style.css";
 
 export function CardList({ children }) {
     return (
-        <ul>{children}</ul>
+        <div className="container">{children}</div>
     );
 }
 
 export function CardItem(props) {
     return (
-        <div>
-            <img
-                className="img-thumbnail card-image"
-                src={props.image}
-                istarget={props.istarget}
-            ></img>
-        </div>
+        <img
+            onClick={props.handleClickImage}
+            className="img-thumbnail card-image"
+            src={props.image}
+        />
     );
 }

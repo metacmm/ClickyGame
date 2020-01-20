@@ -10,7 +10,8 @@ class CardContainer extends Component {
         animals: animals,
         score: 0,
         topScore: 0,
-        clickedItem: []
+        clickedItem: [],
+        guessed: true
     };
 
 
@@ -24,13 +25,15 @@ class CardContainer extends Component {
             this.setState({
                 score: this.state.score + 1,
                 topScore: Math.max(this.state.topScore, this.state.score + 1),
-                clickedItem: clicketItemCopy
+                clickedItem: clicketItemCopy,
+                guessed: true
             });
             
         } else {
             this.setState({
                 score: 0,
-                clickedItem: []
+                clickedItem: [],
+                guessed: false
             });
         }
 
@@ -53,6 +56,7 @@ class CardContainer extends Component {
                 <Nav
                     score={this.state.score}
                     topScore={this.state.topScore}
+                    guessed={this.state.guessed}
                 />
                 <Title />
                 <CardList>
@@ -61,6 +65,7 @@ class CardContainer extends Component {
                             key={item.id}
                             handleClickImage={this.handleClickImage}
                             image={item.image}
+                            guessed={this.state.guessed}
                         />
                     )}
                 </CardList>

@@ -11,7 +11,7 @@ export function CardItem(props) {
     return (
         <img
             onClick={props.handleClickImage}
-            className="img-thumbnail card-image"
+            className={props.guessed? "img-thumbnail card-image" : "img-thumbnail card-image shake"} 
             src={props.image}
         />
     );

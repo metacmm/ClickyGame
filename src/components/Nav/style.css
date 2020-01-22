@@ -1,7 +1,12 @@
 .textright{
-    color: green;
+    color: #aeda69;
 }
 
 .textwrong{
     color: red;
+}
+
+.navtop{
+    font-family: 'Fredoka One', cursive;
+    color: pink;
 }

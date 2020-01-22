@@ -18,7 +18,7 @@ class CardContainer extends Component {
     handleClickImage = (event) => {
         const element = event.target;
         console.log(event.target);
-        
+
         if (!this.state.clickedItem.includes(element)) {
             let clicketItemCopy = this.state.clickedItem;
             clicketItemCopy.push(element);
@@ -28,7 +28,7 @@ class CardContainer extends Component {
                 clickedItem: clicketItemCopy,
                 guessed: true
             });
-            
+
         } else {
             this.setState({
                 score: 0,
@@ -40,8 +40,8 @@ class CardContainer extends Component {
         this.shuffleArray(this.state.animals);
     }
 
-    shuffleArray = (arrList) =>{
-        for (let i = arrList.length - 1; i > 0; i--){
+    shuffleArray = (arrList) => {
+        for (let i = arrList.length - 1; i > 0; i--) {
             let rndIdx = Math.floor(Math.random() * (i - 1));
             let temp = arrList[i];
             arrList[i] = arrList[rndIdx];

@@ -1,11 +1,12 @@
 import React from "react";
+import "./style.css";
 
 function Title(){
     return (
-        <header>
-            <h1>Clicky Game!</h1>
+        <div className="jumbotron jumbotron-fluid">
             <h4>Click on an image to earn points</h4>
-        </header>
+            <h4>Don't click the same image twice!</h4>
+        </div>
     )
 }
 

@@ -3,7 +3,7 @@ import "./style.css";
 
 export function CardList({ children }) {
     return (
-        <div className="container">{children}</div>
+        <div className="container-md">{children}</div>
     );
 }
 
